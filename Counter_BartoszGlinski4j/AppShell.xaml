@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Counter_BartoszGlinski4j.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:Counter_BartoszGlinski4j.Views"
+    Shell.FlyoutBehavior="Flyout">
+    <TabBar>
+        <ShellContent
+            Route="AllCountersPage"
+            Title="Counters"
+            ContentTemplate="{DataTemplate views:AllCountersPage}" />
+    </TabBar>
+
+    <ShellContent
+        Route="CounterPage"
+        ContentTemplate="{DataTemplate views:CounterPage}"
+        Shell.PresentationMode="ModalAnimated" />
+
+</Shell>

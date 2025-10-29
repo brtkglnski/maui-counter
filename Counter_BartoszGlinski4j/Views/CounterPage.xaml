@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:Counter_BartoszGlinski4j.ViewModels"
+             x:Class="Counter_BartoszGlinski4j.Views.CounterPage"
+             x:DataType="viewModels:CounterViewModel"
+             Title="CounterPage">
+
+    <ContentPage.BindingContext>
+        <viewModels:CounterViewModel/>
+    </ContentPage.BindingContext>
+    
+    <VerticalStackLayout>
+        <Entry
+            Text="{Binding Name, Mode=TwoWay}"
+            Placeholder="Enter your counter name"
+            HeightRequest="50" />
+
+
+        <Entry
+          Text="{Binding InitialAmountString, Mode=TwoWay}"
+          Keyboard="Numeric"
+          Placeholder="Enter your default amount"
+          HeightRequest="50" />
+
+        <Grid ColumnDefinitions="*,*" ColumnSpacing="4">
+            <Button Grid.Column="0"
+            Text="Add"
+            Command="{Binding SaveCommand}" />
+
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>
