@@ -8,4 +8,6 @@
 <h3>Uwagi:</h3>
 <li>
   <ul>Kazdy counter ma swój plik przy używaniu serializacji JSON, co jest nieoptymalne</ul>
+  <ul>Dodawanie liczników nie posiada walidacji danych</ul>
+
 </li>
